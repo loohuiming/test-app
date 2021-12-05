@@ -45,6 +45,12 @@ export default function ViewQuestions(props) {
             badgeColor: "secondary",
             topicTitle: "Topic 3",
             question: "WHAT'S THE MOST PAIN YOU'VE EVER BEEN IN THAT WASN'T PHYSICAL?",
+        },
+        {
+            topic: 3,
+            badgeColor: "secondary",
+            topicTitle: "Topic 3",
+            question: "WHAT ABOUT YOURSELF IS HARDEST TO ADMIT?",
         }
     ];
 

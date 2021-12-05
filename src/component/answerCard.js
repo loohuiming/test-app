@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import Swal from 'sweetalert2'
 
 export default function AnswerCard(props) {
@@ -45,7 +46,9 @@ export default function AnswerCard(props) {
                     <b>{eachCard.question}</b>
                 </Typography>
                 <br />
-                <Button variant="outlined" color={eachCard.badgeColor} size="small" onClick={() => handleOpen(eachCard)} >ANSWER ME</Button>
+                <Box textAlign='center'>
+                <Button variant="outlined" color={eachCard.badgeColor} size="small" onClick={() => handleOpen(eachCard)} >PICK ME</Button>
+                </Box>
             </CardContent>
         </Card>
     )

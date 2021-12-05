@@ -10,16 +10,16 @@ import ViewQuestions from "./component/viewQuestion.js"
 function App() {
   const initialContent = [
     {
-      topic: 2,
-      topicTitle: "Topic 2",
-      badgeColor: "success",
+      topic: 3,
+      topicTitle: "Topic 3",
+      badgeColor: "secondary",
       question: "WHAT INSECURITY OF YOURS HOLDS YOU BACK THE MOST?",
       answer: "this is what a short question will look like"
     },
     {
-      topic: 3,
-      topicTitle: "Topic 3",
-      badgeColor: "secondary",
+      topic: 1,
+      topicTitle: "Topic 1",
+      badgeColor: "primary",
       question: "WHEN WAS THE LAST TIME YOU FELT TRULY UNDERSTOOD BY SOMEBODY? WHO WAS IT? WHAT DID THEY UNDERSTAND?",
       answer: "this is what a super long question will look like"
     },
@@ -27,14 +27,14 @@ function App() {
       topic: 1,
       topicTitle: "Topic 1",
       badgeColor: "primary",
-      question: "WHAT INSECURITY OF YOURS HOLDS YOU BACK THE MOST?",
+      question: "WHAT DO YOU ADMIRE ABOUT YOURSELF",
       answer: "this is what a short question will look like"
     },
     {
       topic: 2,
       topicTitle: "Topic 2",
       badgeColor: "success",
-      question: "WHAT INSECURITY OF YOURS HOLDS YOU BACK THE MOST?",
+      question: "HOW ARE YOU, REALLY?",
       answer: "this is what a short question will look like"
     }
   ];
@@ -64,8 +64,8 @@ function App() {
           <Toolbar sx={{ flexWrap: 'wrap' }}>
             <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
               <Tabs value={value} onChange={handleTabs} centered>
-                <Tab label="View answers" />
-                <Tab label="Share your thoughts" />
+                <Tab label="Read all answers" />
+                <Tab label="Pick a question" />
               </Tabs>
             </Box>
           </Toolbar>

@@ -7,10 +7,10 @@ import Container from '@mui/material/Container';
 import Badge from '@mui/material/Badge';
 
 export default function ViewAnswers(props) {
-    const { value, index, cardContent } = props;
-  
-    return (
-      <>
+  const { value, index, cardContent } = props;
+
+  return (
+    <>
       <div>
         {
           value === index && (
@@ -24,7 +24,8 @@ export default function ViewAnswers(props) {
                           <Typography variant="h7" component="div">
                             <b>{eachCard.question}</b>
                           </Typography>
-                          <Typography variant="h8">
+                          <br />
+                          <Typography>
                             {eachCard.answer}
                           </Typography>
                         </CardContent>
@@ -36,6 +37,6 @@ export default function ViewAnswers(props) {
             </Container>)
         }
       </div>
-      </>
-    );
-  }
+    </>
+  );
+}
