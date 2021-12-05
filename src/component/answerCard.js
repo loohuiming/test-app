@@ -16,7 +16,7 @@ export default function AnswerCard(props) {
         answer: ""
     };
 
-    const handleOpen = () =>  (Swal.fire(
+    const handleOpen = () => (Swal.fire(
         {
             icon: 'question',
             html: eachCard.question,
@@ -25,15 +25,18 @@ export default function AnswerCard(props) {
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Submit'
         }).then((result) => {
-            Swal.fire({
-                title: 'Thank You!',
-                icon: 'success'
-            });
-            handleTabs(onclick, 0);
-            cardValues.answer = result.value;
-            appendToList(cardValues);
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Thank You!',
+                    icon: 'success'
+                });
+                handleTabs(onclick, 0);
+                cardValues.answer = result.value;
+                appendToList(cardValues);
+            }
         })
-        );
+
+    );
 
     return (
         <Card sx={{ minWidth: 275 }}>
