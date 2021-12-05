@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 
 export default function AnswerForm(props) {
@@ -17,7 +16,8 @@ export default function AnswerForm(props) {
         badgeColor: selectedCard.badgeColor,
         question: selectedCard.question,
         answer: ""
-    }
+    };
+
     const [values, setValues] = React.useState(initialValues);
 
     const handleInputChange = e => {
@@ -27,15 +27,12 @@ export default function AnswerForm(props) {
             ...values,
             [name]: value
         })
-    }
+    };
 
     return (
         <>
             <div>
                 <Dialog onClose={handleClose} open={open}>
-                    <DialogTitle>
-
-                    </DialogTitle>
                     <DialogContent>
                         <Typography variant="h7" component="div">
                             <b>{selectedCard.question}</b>

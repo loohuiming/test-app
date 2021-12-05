@@ -45,15 +45,11 @@ function App() {
 
   const handleTabs = (event, newValue) => {
     setValue(newValue);
-    console.log(newValue);
   };
 
   const appendToList = (obj) => {
-    console.log(obj)
     const newArray = [...cardContent, obj];
-    console.log(newArray)
     setCardContent(newArray);
-    // console.log(cardContent)
   };
 
   return (
@@ -76,7 +72,7 @@ function App() {
         </AppBar>
         <br />
         <ViewAnswers value={value} index={0} cardContent={cardContent}></ViewAnswers>
-        <ViewQuestions value={value} index={1} cardContent={cardContent} appendToList={appendToList}></ViewQuestions>
+        <ViewQuestions value={value} index={1} appendToList={appendToList} handleTabs={handleTabs}></ViewQuestions>
       </React.Fragment>
     </div>
   );
